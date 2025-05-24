@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AgoraTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="reschedule_title">Reschedule Your Assessment</string>
+    <string name="schedule_title">Schedule Your Assessment</string>
+    <string name="error_schedule_empty_fields">Fields cannot be empty</string>
+    <string name="schedule_success">Your assessment has been scheduled successfully</string>
+    <string name="error_fetch_url">Network Error</string>
+    <string name="error_missing_url">Meeting does not exist</string>
+</resources>

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  body {
+    background-color: #fff0f0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Video section takes 85% of screen height */
+  .video-section {
+    flex: 0 0 85%;
+    display: flex;
+    position: relative;
+    background-color: #290a0a;
+  }
+  
+  /* Main video display fills the container */
+  #full-screen-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e84a4a;
+    font-size: 18px;
+  }
+  
+  /* Self view (local) video */
+  #local-video-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30%;
+    max-width: 120px;
+    aspect-ratio: 4/3;
+    background-color: #333;
+    border-radius: 8px;
+    z-index: 10;
+    overflow: hidden;
+    border: 2px solid #f44242;
+  }
+  
+  #local-video {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #local-video-stream {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Controls section takes exactly 15% of screen height */
+  .controls-container {
+    flex: 0 0 15%;
+    background-color: #fff0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px;
+  }
+  
+  .video-controls {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 50px;
+  }
+  
+  /* Control buttons styling */
+  .control-button {
+    background-color: #ffa6a6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(174, 0, 0, 0.2);
+  }
+  
+  .control-button i {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Active state */
+  .control-button.media-active {
+    background-color: #f44242;
+  }
+  
+  /* Muted state */
+  .control-button.muted {
+    background-color: #8b0000;
+  }
+  
+  /* Leave button now has the same style as other control buttons but with red color */
+  .control-button.leave {
+    background-color: #8b0000;
+    box-shadow: 0 2px 8px rgba(139, 0, 0, 0.3);
+  }
+  
+  /* Remote videos are stacked at the bottom */
+  #remote-video-container {
+    display: none; /* Hide by default, replaced by main view */
+  }

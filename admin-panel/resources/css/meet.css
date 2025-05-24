@@ -1,0 +1,73 @@
+/* Record button styling */
+#record-toggle {
+  position: relative;
+  background-color: #fff0f0;
+  border: 1px solid #ffcece;
+  border-radius: 50%;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+#record-toggle:hover {
+  background-color: #ffe5e5;
+  transform: scale(1.05);
+}
+
+#record-toggle i {
+  color: #ff4444;
+  transition: color 0.3s ease;
+}
+
+/* Recording active state */
+#record-toggle.recording {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-color: #ff0000;
+  animation: pulse 2s infinite;
+}
+
+#record-toggle.recording i {
+  color: #ff0000;
+}
+
+/* Recording indicator */
+.recording-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.recording-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  margin-right: 5px;
+  animation: blink 1s infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
